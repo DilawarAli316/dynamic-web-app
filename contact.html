@@ -338,28 +338,6 @@
     </div>
     <!-- Contact End -->
 
-    <script>
-      document
-        .getElementById("contact-form")
-        .addEventListener("submit", function (event) {
-          event.preventDefault(); // Prevent the default form submission
-
-          const name = document.getElementById("name").value;
-          const email = document.getElementById("email").value;
-          const message = document.getElementById("message").value;
-
-          // Build the mailto link
-          const mailtoLink = `mailto:info@ablenutritons.com?subject=Contact%20Form%20Submission&body=Name:%20${encodeURIComponent(
-            name
-          )}%0AEmail:%20${encodeURIComponent(
-            email
-          )}%0AMessage:%20${encodeURIComponent(message)}`;
-
-          // Open the user's email client with the pre-filled details
-          window.location.href = mailtoLink;
-        });
-    </script>
-
     <!-- Footer Start -->
     <div class="container-fluid footer py-5 wow fadeIn" data-wow-delay="0.1s">
       <div class="container py-5">
@@ -599,8 +577,58 @@
     <script src="lib/waypoints/waypoints.min.js"></script>
     <script src="lib/lightbox/js/lightbox.min.js"></script>
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script>
+      emailjs.init("RohbWJJ3i2WrbtBhm");
+
+      document
+        .getElementById("contact-form")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          const name = document.getElementById("name").value;
+          const email = document.getElementById("email").value;
+          const message = document.getElementById("message").value;
+
+          emailjs
+            .send("service_q5mw51j", "template_8oeuq2b", {
+              name: name,
+              email: email,
+              message: message,
+            })
+            .then(
+              function (response) {
+                console.log("SUCCESS!", response.status, response.text);
+                // alert("Your message has been sent successfully!");
+                Swal.fire({
+                  title: "Message Sent!",
+                  text: "Your message has been sent successfully.",
+                  icon: "success",
+                  confirmButtonText: "OK",
+                  confirmButtonColor: getComputedStyle(document.documentElement)
+                    .getPropertyValue("--bs-primary")
+                    .trim(),
+                  background: getComputedStyle(document.documentElement)
+                    .getPropertyValue("--bs-light")
+                    .trim(),
+                  color: getComputedStyle(document.documentElement)
+                    .getPropertyValue("--bs-dark")
+                    .trim(),
+                });
+              },
+              function (error) {
+                console.log("FAILED...", error);
+                alert(
+                  "An error occurred while sending your message. Please try again."
+                );
+              }
+            );
+        });
+    </script>
   </body>
 </html>
