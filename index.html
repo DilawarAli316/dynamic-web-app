@@ -829,25 +829,36 @@
       // Function to display the alert after 5 seconds
       setTimeout(() => {
         const alertHTML = `
-          <div class="alert alert-light alert-dismissible fade show" role="alert" style="    position: fixed;  top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 65%;
-    z-index: 10;">
-            <h4 class="alert-heading">Disclaimer!</h4>
-            <p>
-              The information provided on this website is intended for general knowledge purposes and is based on the World Health Organization (WHO) recommendations on infant nutrition. It is not a substitute for professional medical advice, diagnosis, or treatment. Always seek the advice of a qualified healthcare provider for questions regarding the health and nutrition of your infant. Never disregard professional medical advice or delay in seeking it because of something you have read on this website.
-
+          <div class="alert alert-light alert-dismissible fade show" role="alert" style="
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 90%;
+            max-width: 950px;
+            z-index: 10;
+            padding: 1.5rem;
+          ">
+            <h4 class="alert-heading" style="
+              font-size: clamp(1.2rem, 3vw, 1.8rem);
+              margin-bottom: 1rem;
+            ">Disclaimer!</h4>
+            <p style="
+              font-size: clamp(0.875rem, 2vw, 1rem);
+              line-height: 1.5;
+              margin-bottom: 1rem;
+            ">
+              The information provided on this website is intended for general knowledge purposes and is based on the World Health Organization (WHO) recommendations on infant nutrition. It is not a substitute for professional medical advice, diagnosis, or treatment. Always seek the advice of a qualified healthcare provider for questions regarding the health and nutrition of your infant. Never disregard professional medical advice or delay in seeking it because of something you have read on this website.
             </p>
             <hr />
-            <p class="mb-0">
-             The World Health Organization (WHO) strongly advocates for breastfeeding due to its numerous health benefits for both infants and mothers.
-
+            <p class="mb-0" style="
+              font-size: clamp(0.875rem, 2vw, 1rem);
+              line-height: 1.5;
+            ">
+              The World Health Organization (WHO) strongly advocates for breastfeeding due to its numerous health benefits for both infants and mothers.
             </p>
-              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
           </div>
-          
         `;
 
         // Insert the alert into the placeholder
