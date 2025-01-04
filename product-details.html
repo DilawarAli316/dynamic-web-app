@@ -441,7 +441,7 @@
             "Power of Synbiotics: This formula combines probiotics and prebiotics, supporting a healthy gut microbiome, promoting digestive health, and enhancing nutrient absorption, which is essential for the infant's well-being.",
             "Halal Certified: AD-1 adheres to strict dietary and quality standards, the formula meets Halal certification requirements.",
           ],
-          image: "img/AD-1.png",
+          image: "img/1.jpg",
           description2:
             "AD-1 Advance Infant Formula a trusted, high-quality source of nutrition that ensures the healthy development of their infant from birth to 6 months.",
         },
@@ -458,10 +458,9 @@
             "Synbiotic Blend (Probiotics & Prebiotics): The inclusion of probiotics and prebiotics fosters a healthy gut microbiome, improving digestive health and enhancing nutrient absorption, critical for overall well-being.",
             "Halal Certified: AD-2 adheres to the highest quality and dietary standards, offering confidence in a product that meets Halal certification requirements.",
           ],
-          image: "img/AD-3.png",
+          image: "img/2.jpg",
           description2:
             "AD-2 Advance Follow-On Formula provides a trusted, high-quality nutritional solution to support the continued healthy development of infants from 6 months to 1 year. Its advanced formulation ensures balanced nutrition for cognitive, physical, and immune health.",
-          image: "img/AD-22.jpg",
         },
         {
           id: "3",
@@ -475,7 +474,7 @@
             "Synbiotic Complex (Probiotics & Prebiotics): The inclusion of a synbiotic blend helps maintain a healthy digestive system, supports gut health, and optimizes nutrient absorption, which is critical for the child’s overall health and immune support.",
             "Halal Certified: AD-3 Grow Baby Advance Growing Up Formula adheres to stringent Halal certification standards, ensuring that it meets the highest dietary and quality guidelines.",
           ],
-          image: "img/AD-3.png",
+          image: "img/3.jpg",
           description2:
             "AD-3 Grow Advance Growing Up Formula is a premium, reliable source of nutrition designed to support the healthy development of toddlers. Its advanced formulation provides essential nutrients for both physical growth and cognitive development.",
         },
@@ -492,7 +491,7 @@
             "DHA & ARA (Docosahexaenoic Acid and Arachidonic Acid): These vital fatty acids support brain development and visual acuity, playing a critical role in cognitive and sensory growth during the infant's early months.",
             "Halal Certified: LF Lactose-Free Formula adheres to the highest Halal dietary standards, a trusted and compliant source of nutrition for infants.",
           ],
-          image: "img/LF.png",
+          image: "img/4.jpg",
           description2:
             "LF Lactose-Free Formula offers a reliable, high-quality nutritional solution that meets the needs of infants with lactose intolerance, ensuring they receive comprehensive nourishment for optimal growth, development, and digestive comfort.",
         },
@@ -508,7 +507,7 @@
             "DHA & ARA (Docosahexaenoic Acid and Arachidonic Acid): Fortified with DHA and ARA, essential omega fatty acids, this formula plays a crucial role in supporting brain development and visual acuity, promoting cognitive function and sensory development.",
             "Halal Certified: LF Lactose-Free Formula adheres to the highest Halal dietary standards, a trusted and compliant source of nutrition for infants.",
           ],
-          image: "img/AD-P.png",
+          image: "img/5.jpg",
           description2:
             "AD-Pre Premature & LBW Infant Formula is a premium, tailored nutritional solution designed to support the growth, development, and well-being of premature and low birth weight infants. Its advanced formulation provides critical nutrients to foster healthy development, digestive comfort, and cognitive growth.",
         },
@@ -526,9 +525,11 @@
         const productDetailDiv = document.getElementById("product-detail");
         productDetailDiv.innerHTML = `
             <div class="col-md-6">
-              <img src="${product.image}" alt="${
-          product.name
-        }" class="img-fluid rounded" />
+              <img src="${product.image}" ${
+          product.id == 1
+            ? "class='img-fluid rounded' style='padding-right: 7.3rem; padding-top: 4.3rem; padding-bottom: 4.3rem; padding-left : 2rem; background-color: #fff'"
+            : ""
+        } alt="${product.name}" class="img-fluid rounded" />
             </div>
             <div class="col-md-6">
               <h2 class="text-primary">${product.name}</h2>
