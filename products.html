@@ -50,6 +50,20 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet" />
+    <style>
+      .program-item {
+        display: flex;
+        flex-direction: column;
+        height: 100%; /* Ensures all items have the same height */
+      }
+      .program-text {
+        flex-grow: 1; /* Allows the text area to take up remaining space */
+      }
+      .program-img img {
+        object-fit: contain; /* Ensures the image covers the area without distortion */
+        /* height: 200px; Set a fixed height for uniformity */
+      }
+    </style>
   </head>
 
   <body>
@@ -141,7 +155,7 @@
               <a href="index.html" class="nav-item nav-link">Home</a>
               <a href="about.html" class="nav-item nav-link">About</a>
               <a href="service.html" class="nav-item nav-link">Services</a>
-              <a href="program.html" class="nav-item nav-link active"
+              <a href="products.html" class="nav-item nav-link active"
                 >Products</a
               >
               <!-- <a href="event.html" class="nav-item nav-link">Events</a> -->
@@ -507,7 +521,7 @@
                 <div class="program-text-inner text-center">
                  
                     <h1 class="fw-bold mb-0">AD-P</h1>
-                    <h5 class="fw-bold mb-0">Pre Mature & Low Birth Weight</h5>
+                    <h5 class="fw-bold mb-2">Pre Mature & Low Birth Weight</h5>
                  
                   <span class="mt-3 mb-0">
                     The AD-P Formula meets the nutritional needs of premature and low birth weight infants from birth.
@@ -745,7 +759,7 @@
               <div class="program-text bg-white px-4 pb-3">
                 <div class="program-text-inner text-center">
                   <h1 class="fw-bold mb-0">AD-P</h1>
-                  <h5 class="fw-bold mb-0">Pre Mature & Low Birth Weight</h5>
+                  <h5 class="fw-bold mb-1">Pre Mature & Low Birth Weight</h5>
                   <span class="mt-3 mb-0">
                     The AD-P Formula meets the nutritional needs of premature and low birth weight infants from birth.
                   </span>
@@ -934,9 +948,10 @@
               <div class="program-text bg-white px-4 pb-3">
                 <div class="program-text-inner text-center">
                   <h1 class="fw-bold mb-0">AM 92</h1>
-                  <h4 class="fw-bold mb-0">For Pregnant and Lactating women</h4>
+                  <h6 class="fw-bold mb-2">For Pregnant and Lactating women</h6>
                   <span class="mt-3 mb-0">
-                    AM 92 is a supplement crafted for the dietary needs of pregnant and lactating women.
+                    AM 92 is an nutritional supplement tailored for the dietary
+                    requirements of pregnant and lactating women
                   </span>
                   <a
                     href="product-details.html?id=9"
