@@ -503,7 +503,7 @@ progress {
 }
 @media(min-width: 1200px) {
 	.container-xl,.container-lg,.container-md,.container-sm,.container {
-	max-width:1140px
+	max-width:1240px
 }
 }
 @media(min-width: 1400px) {
@@ -9799,10 +9799,11 @@ h6,
 /*** Hero Header ***/
 .hero-header,
 .page-header {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.05)), url(../img/hero-img.jpg);
-    background-position: center center;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.05)), url(../img/home_1.jpg);
+    background-position: top center;
     background-repeat: no-repeat;
     background-size: cover;
+
 }
 /*** Hero Header ***/
 
